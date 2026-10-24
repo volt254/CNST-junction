@@ -1,6 +1,6 @@
 name: Build CNST Junction APK
 
-on:
+"on":
 workflow_dispatch:
 push:
 branches:
