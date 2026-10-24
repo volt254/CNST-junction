@@ -3,7 +3,8 @@ name: Build CNST Junction APK
 on:
 workflow_dispatch:
 push:
-branches: [main]
+branches:
+- main
 
 jobs:
 build:
@@ -27,11 +28,7 @@ steps:
   - name: Install system dependencies
     run: |
       sudo apt-get update
-      sudo apt-get install -y \
-        git zip unzip autoconf automake autopoint \
-        ccache cmake g++ gcc libffi-dev libltdl-dev \
-        libtool libssl-dev make patch pkg-config \
-        zlib1g-dev
+      sudo apt-get install -y git zip unzip autoconf automake autopoint ccache cmake g++ gcc libffi-dev libltdl-dev libtool libssl-dev make patch pkg-config zlib1g-dev
 
   - name: Install Buildozer
     run: |
